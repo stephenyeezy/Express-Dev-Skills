@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Dev Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Edit Skills</h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+      <input type="checkbox" name="done" <%= skill.done ? 'checked' : '' %> >
+      <input type="text" name="skill" value="<%= skill.skill %>">
+      <button type="submit">Update Skills</button>
+    </form>
+    <a href="/skills">Skills List</a>
+  </body>
+</html>
