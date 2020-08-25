@@ -9,18 +9,16 @@
 </head>
 <body>
   <a href="/">Home</a>
-  <h1>Todos as of <%= time %></h1>
+  <h1>Awesome Developer Skills</h1>
   <ul>
     <% skills.forEach(function(t) { %>
       <li>
         <form action="/skills/<%= t.id %>?_method=DELETE"
           method="POST" class="delete-form"  
         >
-          <button type="submit">X</button>
+          <button type="submit">Delete</button>
         </form>
         <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-          - 
-        <%= t.done ? 'done' : 'not done' %>
       </li>
     <% }); %>
   </ul>
